@@ -17,13 +17,13 @@
 
     <div id="tts-eval-app">
         <div id="header">
-            TTS
-            <img id="logo" src="static/images/full-logo.png">
+            TTS Evaluation
+            <!-- <img id="logo" src="static/images/full-logo.png">-->
         </div>
         <div id="body">
         <div id="exp-sel-bar">
             <select id="exp-selector" class="btn" v-model="cur_exp">
-                <option value="" disabled selected>请选择实验……</option>
+                <option value="" disabled selected>Please Select Experiment……</option>
                 <template v-for="exp in exp_list">
                     <option :value="exp">{{ exp.type }} -  {{ exp.name }}</option>
                 </template>
@@ -108,16 +108,17 @@
             -->
 
         </div>
+		<br>
         <div id="submit-bar" class="btn_wrapper">
             <button class="btn" @click="saveResult">Save</button>
             <button class="btn" @click="sendResult">Submit</button>
         </div>
         </div><!-- div .body end -->
     </div>
-
     <script src="static/scripts/config.js"></script>
     <script src="static/scripts/common.js"></script>
     <script src="static/scripts/tts-eval-app.js"></script>
+
 
 </body>
 </html>

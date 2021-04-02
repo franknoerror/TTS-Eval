@@ -64,7 +64,7 @@ var app = new Vue({
                             ".json";
             var name;
             do {
-                name = prompt("请输入 姓名 或 昵称：");
+                name = prompt("Please type in your name or nickname：");
             // 必须输入
             } while( name === "null" || name.length === 0 );
             save_name = name + "_" + save_name;
@@ -73,7 +73,7 @@ var app = new Vue({
         sendResult: function(){
             var name;
             do {
-                name = prompt("请输入 姓名 或 昵称：");
+                name = prompt("Please type in your name or nickname：");
             // 必须输入
             } while( name === "null" || name.length === 0 );
             send_text = name + "_sep_" + JSON.stringify(this.exp_list);
