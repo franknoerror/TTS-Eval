@@ -78,6 +78,11 @@ body {
     justify-content: space-between;
 }
 
+.cate_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .audio_select_wrapper {
     display: flex;
     justify-content: space-between;
@@ -121,6 +126,12 @@ audio {
     width: 95px;
     height: 36px;
     margin-bottom: 15px;
+}
+
+.trans {
+    width: 195px;
+    height: 36px;
+    margin-top: 15px;
 }
 
 .btn {

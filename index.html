@@ -1,7 +1,7 @@
 <!DOCTYPE html5>
 <html>
 <head>
-    <title>TTS Evaluation System</title>
+    <title>Phone Evaluation System</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="shortcut icon" href="static/images/favicon.ico">
     <script
@@ -17,7 +17,7 @@
 
     <div id="tts-eval-app">
         <div id="header">
-            TTS Evaluation
+            Phone Evaluation
             <!-- <img id="logo" src="static/images/full-logo.png">-->
         </div>
         <div id="body">
@@ -48,6 +48,10 @@
                 {{ cur_exp.eps_list[cur_exp.cur_ep_id-1].ts }}
             </div>
 
+            <div class="cate_wrapper" v-if="cur_exp.name">
+                <audio controls :src="cur_exp.eps_list[cur_exp.cur_ep_id-1].cate"></audio>
+            </div>
+
             <div class="audio_select_wrapper" v-if="cur_exp.type === 'MOS'">
                 <div class="audio_wrapper">
                     <template v-for="audio in cur_exp.eps_list[cur_exp.cur_ep_id-1].ep">
@@ -56,12 +60,17 @@
                 </div>
                 <div class="select_wrapper">
                     <template v-for="audio in cur_exp.eps_list[cur_exp.cur_ep_id-1].ep">
+                        <div class="trans">
+                            {{ audio.trans }}
+                        </div>
+                    </template>
+                </div>
+                <div class="select_wrapper">
+                    <template v-for="audio in cur_exp.eps_list[cur_exp.cur_ep_id-1].ep">
                         <div class="selector"><select class="btn" v-model="audio.eval">
-                            <option value="bad">bad</option>
-                            <option value="poor">poor</option>
-                            <option value="fair">fair</option>
-                            <option value="good">good</option>
-                            <option value="excellent">excellent</option></select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="not sure">Not sure</option></select>
                         </div>
                     </template>
                 </div>
