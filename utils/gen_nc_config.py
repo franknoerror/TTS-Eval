@@ -1,7 +1,7 @@
 import os 
 import json
 
-guide_info = "Given example native pronunciation of a phone, decide whether corresponding phone in wrod(s) is a standard one or not. Labeled phone seuqnce is shown in parenthesis."
+guide_info = "Given example native pronunciation of a phone, decide whether corresponding phone in word(s) is a categorical one or not. Labeled phone seuqnce is shown in parenthesis."
 
 def build_nc_config():
     nc_config_list = []
