@@ -43,10 +43,10 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     app = make_app()
     app.listen(PORT)
-    logging.info("开始服务！")
+    logging.info("Service started")
     try:
         tornado.ioloop.IOLoop.current().start()
     except KeyboardInterrupt:
-        logging.info("服务正常终止。")
+        logging.info("Service stopped")
     except Exception as e:
         logging.error(e)
